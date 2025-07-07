@@ -37,10 +37,10 @@ int peek(){
 int pop(){
     int t = s.top();
     s.pop();
-    if(t<=-curr_min){
-       int prev_min = 2* curr_min -t;
+    if(t<=curr_min){
        int res = curr_min;
-       curr_min = prev_min;
+       curr_min = 2 *curr_min-t;
+       
        return res;
     }else{
         return t;
